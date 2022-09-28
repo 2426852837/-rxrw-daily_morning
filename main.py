@@ -11,7 +11,7 @@ start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 pig_city = "北京"
 birthday = os.environ['BIRTHDAY']
-pig_birthday = os.environ['PIG_BIRTHDAY']
+pig_birthday = "10-15"
 
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
