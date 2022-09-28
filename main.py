@@ -9,7 +9,7 @@ import random
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
-pig_city = os.environ['PIG_CITY']
+pig_city = "北京"
 birthday = os.environ['BIRTHDAY']
 pig_birthday = os.environ['PIG_BIRTHDAY']
 
