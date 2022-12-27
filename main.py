@@ -9,9 +9,9 @@ import random
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
-pig_city = "北京"
+pig_city = os.environ['PIG_CITY']
 birthday = os.environ['BIRTHDAY']
-pig_birthday = "10-15"
+pig_birthday = os.environ['PIG_BIRTHDAY']
 
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
@@ -71,6 +71,6 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 wea, temperature,low, high,wind,air= get_weather()
 pig_wea, pig_temperature,pig_low, pig_high,pig_wind,pig_air = get_pig_weather()
-data = {"weather":{"value":wea, "color":get_random_color()},"temperature":{"value":temperature, "color":get_random_color()},"low":{"value":low, "color":get_random_color()},"high":{"value":high, "color":get_random_color()},"wind":{"value":wind, "color":get_random_color()},"air":{"value":air, "color":get_random_color()},"pig_weather":{"value":pig_wea, "color":get_random_color()},"pig_temperature":{"value":pig_temperature, "color":get_random_color()},"pig_low":{"value":pig_low, "color":get_random_color()},"pig_high":{"value":pig_high, "color":get_random_color()},"pig_wind":{"value":pig_wind, "color":get_random_color()},"pig_air":{"value":pig_air, "color":get_random_color()},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday(), "color":get_random_color()},"birthday_right":{"value":get_pig_birthday(), "color":get_random_color()},"words":{"value":get_words(), "color":get_random_color()}}
+data = {"city":{"value":city, "color":get_random_color()},"weather":{"value":wea, "color":get_random_color()},"temperature":{"value":temperature, "color":get_random_color()},"low":{"value":low, "color":get_random_color()},"high":{"value":high, "color":get_random_color()},"wind":{"value":wind, "color":get_random_color()},"air":{"value":air, "color":get_random_color()},"pig_city":{"value":pig_city, "color":get_random_color()},"pig_weather":{"value":pig_wea, "color":get_random_color()},"pig_temperature":{"value":pig_temperature, "color":get_random_color()},"pig_low":{"value":pig_low, "color":get_random_color()},"pig_high":{"value":pig_high, "color":get_random_color()},"pig_wind":{"value":pig_wind, "color":get_random_color()},"pig_air":{"value":pig_air, "color":get_random_color()},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday(), "color":get_random_color()},"birthday_right":{"value":get_pig_birthday(), "color":get_random_color()},"words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
