@@ -31,5 +31,7 @@ jobs:
       START_DATE: ${{ secrets.START_DATE }}
       BIRTHDAY: ${{ secrets.BIRTHDAY }}
       CITY: ${{ secrets.CITY }}
+      CITY_NAME: ${{ secrets.CITY_NAME }}
       PIG_BIRTHDAY: ${{ secrets.PIG_BIRTHDAY }}
       PIG_CITY: ${{ secrets.PIG_CITY }}
+      PIG_CITY_NAME: ${{ secrets.PIG_CITY_NAME }}
