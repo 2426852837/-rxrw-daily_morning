@@ -7,20 +7,6 @@ import os
 import random
 
 today = datetime.now()
-# start_date = "2021-12-31"
-# city = "610116"
-# city_name = "西安"
-# pig_city = "110000"
-# pig_city_name = "北京"
-# birthday = "10-23"
-# pig_birthday = "10-15"
-#
-# app_id = "wx4ca6f71d78aab518"
-# app_secret = "1749a84a2c89036d57b13b1de24c107b"
-#
-# user_id = "oX1sI6GC9r8M1aYW9ucfGMUC9JxA"
-# user_id_pig = "oX1sI6OG8ib14dv5Fzj3Dv2Xd1n4"
-# template_id = "dvRvriBJD1hT7YeR6-MQHh74wwN2rgMi5ODGRCV8wZw"
 
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
